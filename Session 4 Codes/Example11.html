@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.grid.minmax-rows {
+  display: grid;
+  grid-template-rows: minmax(50px, 150px) 1fr;
+  grid-template-columns: 200px;
+  height: 300px;
+  gap: 10px;
+}
+.grid.minmax-rows div {
+  background: #fab1a0;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+<div class="grid minmax-rows">
+  <div>Min 50px, Max 150px</div>
+  <div>Flexible Row</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.grid.minmax {
+  display: grid;
+  grid-template-columns: minmax(100px, 300px) 1fr;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.grid.minmax div {
+  background: #ffeaa7;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="grid minmax">
+  <div>Min 100px, Max 300px</div>
+  <div>1fr</div>
+</div>
+
+
+</body>
+</html>

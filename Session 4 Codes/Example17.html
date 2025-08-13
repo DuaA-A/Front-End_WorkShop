@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Query Example</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      margin: 0;
+      background: #ffffff;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: darkblue;
+    }
+
+    /* Tablet */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+        color: darkgreen;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 28px;
+        color: darkred;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Responsive Heading</h1>
+  <p>Resize your screen to see the heading change style.</p>
+
+</body>
+</html>

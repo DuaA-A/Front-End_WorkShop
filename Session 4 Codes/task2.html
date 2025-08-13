@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar (No JS)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px 20px;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* HIDDEN CHECKBOX TO TOGGLE MENU */
+    #menu-toggle {
+      display: none;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00d9ff;
+    }
+
+    /* ------- Responsive Styles ------- */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      /* Toggle menu when checkbox is checked */
+      #menu-toggle:checked + .hamburger + .nav-links {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <div class="logo">MyLogo</div>
+
+      <!-- Hidden checkbox for toggle -->
+      <input type="checkbox" id="menu-toggle">
+
+      <!-- Hamburger menu label -->
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Navigation links -->
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluid Grid Example</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -10px;
+    }
+
+    .column {
+      padding: 10px;
+      width: 33.33%; /* Fluid grid: 3 equal columns */
+    }
+
+    .box {
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <h1>Fluid Grid Layout</h1>
+
+  <div class="row">
+    <div class="column">
+      <div class="box">Column 1</div>
+    </div>
+    <div class="column">
+      <div class="box">Column 2</div>
+    </div>
+    <div class="column">
+      <div class="box">Column 3</div>
+    </div>
+  </div>
+
+</body>
+</html>

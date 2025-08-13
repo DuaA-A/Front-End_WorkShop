@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grid Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+      grid-template-columns: 200px 1fr 150px;
+      grid-template-rows: 80px 1fr 60px;
+      height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #4caf50;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav {
+      grid-area: nav;
+      background-color: #2196f3;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main {
+      grid-area: main;
+      background-color: #f1f1f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .aside {
+      grid-area: aside;
+      background-color: #ff9800;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <header class="header">Header</header>
+    <nav class="nav">Navigation</nav>
+    <main class="main">Main Content</main>
+    <aside class="aside">Aside</aside>
+    <footer class="footer">Footer</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.grid.fixed-rows {
+  display: grid;
+  grid-template-rows: 50px 100px 80px;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 200px;
+  background: #f1f1f1;
+}
+.grid.fixed-rows div {
+  background: #74b9ff;
+  text-align: center;
+  line-height: normal;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+<div class="grid fixed-rows">
+  <div>Row 1</div>
+  <div>Row 2</div>
+  <div>Row 3</div>
+</div>
+
+</body>
+</html>

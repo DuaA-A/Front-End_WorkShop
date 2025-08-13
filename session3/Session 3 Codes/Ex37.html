@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+
+<style>
+.slow-btn, .fast-btn {
+  padding: 10px 20px;
+  background: #3498db;
+  color: white;
+  border: none;
+  transition-property: background;
+}
+
+.slow-btn {
+  transition-duration: 2s; /* Very slow */
+}
+
+.fast-btn {
+  transition-duration: 0.2s; /* Very fast */
+}
+
+.slow-btn:hover, .fast-btn:hover {
+  background: #e74c3c;
+}
+</style>
+</head>
+<body>
+<button class="slow-btn">Slow Hover (2s)</button>
+<button class="fast-btn">Fast Hover (0.2s)</button>
+</body>
+</html>

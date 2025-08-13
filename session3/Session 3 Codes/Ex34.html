@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+
+<style>
+.container {
+  display: flex;
+  align-items: center; /* Default for all items */
+  height: 200px;
+  background: #f0f0f0;
+  gap: 10px;
+  padding: 10px;
+}
+
+.item {
+  background: coral;
+  width: 60px;
+  padding: 10px;
+  text-align: center;
+}
+
+.self-start { align-self: flex-start; }
+.self-end { align-self: flex-end; }
+.self-center { align-self: center; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="item">1</div>
+  <div class="item self-start">2 (align-self: flex-start)</div>
+  <div class="item">3</div>
+  <div class="item self-end">4 (align-self: flex-end)</div>
+  <div class="item self-center">5 (align-self: center)</div>
+</div>
+</body>
+</html>

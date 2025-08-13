@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+
+<style>
+.container {
+  display: flex;
+  background: #f0f0f0;
+  padding: 10px;
+  height: 100px;
+  gap: 10px;
+}
+
+.item {
+  background: coral;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.basis-auto { flex-basis: auto; }
+.basis-200 { flex-basis: 200px; }
+.basis-25 { flex-basis: 25%; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="item basis-auto">auto</div>
+  <div class="item basis-200">200px</div>
+  <div class="item basis-25">25%</div>
+</div>
+
+</body>
+</html>

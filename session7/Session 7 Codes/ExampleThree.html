@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+// Store data
+localStorage.setItem('username', 'john_doe');
+localStorage.setItem('userTheme', 'dark');
+
+// Read data
+const username = localStorage.getItem('username');
+console.log(username); // 'john_doe'
+
+// Update data
+localStorage.setItem('username', 'jane_smith');
+
+// Delete single item
+localStorage.removeItem('userTheme');
+
+// Clear all storage
+// localStorage.clear();
+
+// Check if key exists
+if (localStorage.getItem('username') !== null) {
+  console.log('Username exists in storage');
+}
+
+// Storing an object
+const user = {
+  id: 123,
+  name: 'Alice',
+  preferences: { theme: 'dark', notifications: true }
+};
+
+localStorage.setItem('user', JSON.stringify(user));
+
+// Retrieving the object
+const storedUser = JSON.parse(localStorage.getItem('user'));
+console.log(storedUser.name); // 'Alice'
+
+// Storing an array
+const todoList = ['Buy milk', 'Pay bills', 'Walk dog'];
+localStorage.setItem('todos', JSON.stringify(todoList));
+
+// Retrieving the array
+const storedTodos = JSON.parse(localStorage.getItem('todos'));
+console.log(storedTodos[0]); // 'Buy milk'
+
+    </script>
+</body>
+</html>

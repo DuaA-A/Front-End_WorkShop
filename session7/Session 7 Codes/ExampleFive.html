@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+// Get the document title
+console.log(document.title); // "Current Page Title"
+
+// Change the document title
+document.title = "New Page Title";
+
+// Get the document's URL
+console.log(document.URL);
+
+// Get the document's charset
+console.log(document.characterSet); // "UTF-8"
+// Create new element
+const newDiv = document.createElement('div');
+newDiv.className = 'alert';
+newDiv.textContent = 'Hello World!';
+
+// Append to body
+document.body.appendChild(newDiv);
+
+// Create text node
+const textNode = document.createTextNode('Some text');
+
+// Insert before an element
+const firstChild = document.body.firstChild;
+document.body.insertBefore(newDiv, firstChild);
+
+// Remove an element
+const elementToRemove = document.getElementById('old-element');
+elementToRemove.parentNode.removeChild(elementToRemove);
+
+// Replace an element
+const newElement = document.createElement('span');
+newElement.textContent = 'Replacement';
+const oldElement = document.getElementById('replace-me');
+oldElement.parentNode.replaceChild(newElement, oldElement);
+    </script>
+</body>
+</html>

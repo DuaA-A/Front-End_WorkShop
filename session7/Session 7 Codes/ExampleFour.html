@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+    // Store data for current session
+sessionStorage.setItem('tempToken', 'abc123xyz');
+sessionStorage.setItem('welcomeShown', 'true');
+
+// Read data
+const token = sessionStorage.getItem('tempToken');
+console.log(token); // 'abc123xyz'
+
+// Update data
+sessionStorage.setItem('welcomeShown', 'false');
+
+// Delete item
+sessionStorage.removeItem('tempToken');
+
+// Clear all session data
+// sessionStorage.clear();
+
+// Check if key exists
+if (sessionStorage.getItem('welcomeShown') === 'true') {
+  console.log('Welcome message was shown');
+}
+
+// Store object
+const userSession = {
+  id: 456,
+  name: 'Maria',
+  lastActivity: new Date()
+};
+sessionStorage.setItem('currentSession', JSON.stringify(userSession));
+
+// Retrieve object
+const sessionData = JSON.parse(sessionStorage.getItem('currentSession'));
+console.log(sessionData.name); // 'Maria'
+
+// Store array
+const recentSearches = ['react hooks', 'javascript closures', 'css grid'];
+sessionStorage.setItem('searches', JSON.stringify(recentSearches));
+    </script>
+</body>
+</html>

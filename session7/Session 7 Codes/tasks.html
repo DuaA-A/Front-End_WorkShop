@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BOM Event Demo</title>
+  <style>
+    body { height: 2000px; font-family: Arial; padding: 20px; }
+    button { margin: 5px; padding: 10px; }
+    #countdown { font-size: 18px; color: darkblue; margin-top: 20px; }
+    #info { margin-top: 20px; padding: 10px; background: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <h1>🚀 Welcome to the Tech Workshop</h1>
+    <p>Interact with the buttons below to see various Browser Object Model (BOM) features in action!</p>
+  <!-- Task 1 Output -->
+  <div id="info"></div>
+
+  <hr>
+  <!-- Task 2 Buttons -->
+  <!-- <h2>Window Controls</h2>
+  <button onclick="openWin()">Open Event Info</button>
+  <button onclick="closeWin()">Close Info Window</button>
+  <button onclick="focusWin()">Focus Info Window</button>
+  <button onclick="stopWin()">Stop Loading Info</button> -->
+
+  <div id="countdown"></div>
+
+  <script>
+    // ----------------------------
+    // Task 1: Welcome & User Data
+    // ----------------------------
+    alert("Welcome to the Tech Workshop!");
+    let name = prompt("What's your name?");
+    let confirmJoin = confirm("Hi " + name + ", do you want to register for the event?");
+
+    if (confirmJoin) {
+      alert("Great! You're registered, " + name);
+      localStorage.setItem("userName", name);       // Permanent storage
+      sessionStorage.setItem("registered", "true"); // Session storage
+    } else {
+      alert("Maybe next time, " + name + "!");
+      sessionStorage.setItem("registered", "false");
+    }
+    document.getElementById("info").innerHTML =
+      "<strong>User Info:</strong><br>" +
+      "Name: " + localStorage.getItem("userName") + "<br>" +
+      "Registered: " + sessionStorage.getItem("registered");
+      
+    // ----------------------------
+    // Task 2: Countdown & Window
+    // ----------------------------
+    // function startCountdown() {
+    //   let seconds = 10;
+    //   let countdownElement = document.getElementById("countdown");
+      
+    //   let timer = setInterval(() => {
+    //     countdownElement.innerText = "⏳ Event starts in " + seconds + " seconds...";
+    //     seconds--;
+    //     if (seconds < 0) {
+    //       clearInterval(timer);
+    //       countdownElement.innerText = "✅ Event Started!";
+    //     }
+    //   }, 1000);
+
+      // Reminder after 7 seconds
+    //   setTimeout(() => {
+    //     alert("Reminder: The event is about to start!");
+    //   }, 7000);
+    // }
+    // startCountdown();
+
+    // Window methods
+    // let eventWin;
+    // function openWin() { eventWin = window.open("https://example.com", "_blank", "width=400,height=300"); }
+    // function closeWin() { if (eventWin) eventWin.close(); }
+    // function focusWin() { if (eventWin) eventWin.focus(); }
+    // function stopWin() { if (eventWin) eventWin.stop(); }
+
+    // Bonus: change title with document
+    document.title = "BOM Event Demo";
+  </script>
+</body>
+</html>

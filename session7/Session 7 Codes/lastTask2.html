@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visitor Card Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #card {
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 15px;
+            width: 300px;
+            background: #f9f9f9;
+            transition: background 0.3s;
+        }
+
+        #card:hover {
+            background: #e0f7fa;
+        }
+
+        /* onmouseover effect */
+        button {
+            margin: 5px;
+            padding: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body onload="initCard()">
+
+    <h2>🎉 Visitor Card</h2>
+    <div id="card">
+        <p id="name"></p>
+        <p id="size"></p>
+        <p id="status"></p>
+    </div>
+
+    <button onclick="setSession()">Set Session Info</button>
+    <button id="scrollBtn">Scroll & Show URL</button>
+
+    <script>
+        function initCard() {
+            let userName = localStorage.getItem("name");
+            if (!userName) {
+                userName = prompt("Enter your name:");
+                if (userName) {
+                    localStorage.setItem("name", userName);
+                } else {
+                    userName = "Guest";
+                }
+            }
+            document.getElementById("name").innerText = "👤 Name: " + userName;
+            document.getElementById("size").innerText =
+                "📏 Window: " + window.innerWidth + " x " + window.innerHeight;
+        }
+
+        function setSession() {
+            sessionStorage.setItem("status", "Active this session");
+            document.getElementById("status").innerText = "✅ " + sessionStorage.getItem("status");
+        }
+
+        document.getElementById("scrollBtn").addEventListener("click", function () {
+            window.scrollBy(0, 200);
+            alert("🌍 Current URL: " + window.location.href);
+        });
+    </script>
+</body>
+
+</html>

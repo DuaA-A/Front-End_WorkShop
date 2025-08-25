@@ -20,6 +20,8 @@ console.log(username); // 'john_doe'
 // Update data
 localStorage.setItem('username', 'jane_smith');
 
+const usernameUpdated = localStorage.getItem('username');
+console.log(usernameUpdated); // 'jane_smith'
 // Delete single item
 localStorage.removeItem('userTheme');
 

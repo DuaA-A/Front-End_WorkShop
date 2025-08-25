@@ -6,9 +6,17 @@
 <body>
 
 <script>
-window.setInterval(function() {
-  console.log("Repeats every 2 seconds");
-}, 2000);
+  let n=5;
+
+let intervalId = window.setInterval(function() {
+  console.log(n);
+  n--
+  if(n===0){
+    clearInterval(intervalId);
+    console.log("Done");
+  }  
+}, 1000);
+
 </script>
 
 </body>

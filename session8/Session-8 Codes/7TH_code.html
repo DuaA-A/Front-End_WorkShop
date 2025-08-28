@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    first text 
+    <div id="D1">Hello
+        <p class="P1">Hey</p>
+    </div>
+    <div id="any">Hello</div>
+    
+    
+    <script>
+
+        console.log(document.body.childNodes[0].nodeName)
+        console.log(document.body.childNodes[1].nodeName)
+
+        console.log(document.body.childNodes[0].nodeValue)
+        console.log(document.body.childNodes[1].nodeValue)
+        console.log(document.body.childNodes[1].childNodes[0].nodeValue)
+
+        // 1 = Element / 2 = Attribute / 3 = Text / 8 = Comment
+        console.log(document.body.childNodes[0].nodeType)
+        console.log(document.body.childNodes[1].nodeType)
+
+        let mainDiv = document.getElementById('D1')
+        let myCopy = mainDiv.firstElementChild.cloneNode(true)
+        let newDiv = document.getElementById('any')
+        newDiv.appendChild(myCopy)
+        document.createElement('img')
+    </script>
+</body>
+</html>

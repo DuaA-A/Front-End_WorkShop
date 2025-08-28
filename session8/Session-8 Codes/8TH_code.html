@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="D1">Hello
+        <p class="P1" id="P2">Hey</p>
+    </div>
+    <div id="any">Hello</div>
+    text in middle
+    <p>paragraph</p>
+
+
+    <script>
+
+        let myChild = document.getElementsByClassName('P1')
+        console.log(myChild[0].parentNode)
+
+        let siblingsTest = document.getElementById('D1')
+        console.log(siblingsTest.nextElementSibling)
+        console.log(siblingsTest.nextSibling)
+
+        let containsTest = document.getElementsByClassName('P1'),
+            containsTest2 = document.body;
+        console.log(containsTest2.contains(containsTest[0]))
+
+
+    </script>
+</body>
+</html>

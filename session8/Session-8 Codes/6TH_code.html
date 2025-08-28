@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="D1">Hello
+        <p id="myP"> hey</p>
+    </div>
+    <div class="any">Hello</div>
+    <p class="P1">Hey</p>
+
+    <script>
+
+        let test1 = document.body;
+        console.log(test1.childNodes)
+        console.log(test1.children)
+
+        console.log(test1.firstChild)
+        console.log(test1.firstElementChild)
+
+        let test2 = document.getElementById("D1")
+        console.log(test2.lastChild)
+        console.log(test2.lastElementChild)
+
+        let test3 = document.createTextNode(" helllllo")
+        let test4 = document.getElementById("myP")
+        test4.appendChild(test3)
+
+        let test5 = document.createElement('div')
+        let myText = document.createTextNode('div in js')
+        test5.appendChild(myText)
+        test1.insertBefore(test5,test1.firstElementChild)
+
+        test1.removeChild(test1.firstElementChild)
+        test1.removeChild(test1.children[1])
+        test1.removeChild(test1.childNodes[4])
+        
+        </script>
+</body>
+</html>

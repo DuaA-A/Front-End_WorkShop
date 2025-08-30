@@ -11,7 +11,7 @@
     </div>
     <div id="any">Hello</div>
     text in middle
-    <p>paragraph</p>
+    <p id="test">paragraph</p>
 
 
     <script>
@@ -22,7 +22,9 @@
         let siblingsTest = document.getElementById('D1')
         console.log(siblingsTest.nextElementSibling)
         console.log(siblingsTest.nextSibling)
-
+        siblingTest2 = document.getElementById('test')
+        console.log(siblingTest2.previousSibling)
+console.log(siblingTest2.previousElementSibling)
         let containsTest = document.getElementsByClassName('P1'),
             containsTest2 = document.body;
         console.log(containsTest2.contains(containsTest[0]))

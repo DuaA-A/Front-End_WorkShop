@@ -7,8 +7,11 @@
 </head>
 <body>
     <div id="D1">Hello</div>
-    <div class="any">Hello</div>
-    <p class="P1">Hey</p>
+    <div class="any">
+        Hello
+    </div>
+    <p class="any">Hey</p>
+    
     <script>
         // let element1 = document.getElementById('D1'); //Take the element by its ID
         // element1.innerHTML="Not Hello" //Edit its content
@@ -17,10 +20,10 @@
         // element1[1].innerHTML="Not Hello" //Edit its content
 
         // let element1 = document.getElementsByClassName('P1'); //Take the element by its Class
-        // element1[0].innerHTML="Not Hello" //Edit its content
+        // element1.innerHTML="Not Hello" //Edit its content
 
-        // let element1 = document.querySelectorAll('.any'); //Take the element by its Class
-        // element1[0].innerHTML="Not Hello" //Edit its content
+        let element1 = document.querySelectorAll('.any'); //Take the element by its Class
+        element1[0].innerHTML="Not Hello" //Edit its content
     </script>
 </body>
 </html>

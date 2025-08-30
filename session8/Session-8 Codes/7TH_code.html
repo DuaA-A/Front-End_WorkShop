@@ -27,7 +27,7 @@
         console.log(document.body.childNodes[1].nodeType)
 
         let mainDiv = document.getElementById('D1')
-        let myCopy = mainDiv.firstElementChild.cloneNode(true)
+        let myCopy = mainDiv.firstElementChild.cloneNode()
         let newDiv = document.getElementById('any')
         newDiv.appendChild(myCopy)
         document.createElement('img')

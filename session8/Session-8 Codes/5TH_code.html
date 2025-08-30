@@ -9,32 +9,44 @@
     <div id="D1">Hello</div>
     <div class="any">Hello</div>
     <p class="P1">Hey</p>
+    <input type="text" id="username">
 
     <script>
+let x = document.getElementById("username")
+console.log(x.getAttribute("type"))
+x.setAttribute("placeholder","enter your username")
+console.log(x.getAttribute("placeholder"))
 
-        let test1 = document.getElementById('D1');
-        test1.class = "I_see_u"
-        console.log(test1.class)
-        test1.textContent = test1.class;
+console.log(x.hasAttribute("placeholder"))
+x.removeAttribute("placeholder")
+console.log(x.hasAttribute("placeholder"))
+x.type="email"
+console.log(x.getAttribute("type"))
 
-        let test2 = document.getElementsByClassName('any');
-        test2[0].setAttribute('id','I_see_u_here_too');
-        console.log(test2[0].getAttribute('id'));
 
-        let test3 = document.getElementById('I_see_u_here_too')
-        test3.textContent = test3.id; //could write it as test3.textContent = test3.getAttribute('id')
+        // let test1 = document.getElementById('D1');
+        // test1.class = "I_see_u"
+        // console.log(test1.class)
+        // test1.textContent = test1.class;
 
-        let test4 = document.getElementsByClassName('P1')
-        if(test4[0].hasAttribute('id')){
-            test4[0].textContent = test4[0].getAttribute('id')
-        } else{
-            test4[0].textContent = "No ID avilable"
-        }
+        // let test2 = document.getElementsByClassName('any');
+        // test2[0].setAttribute('id','I_see_u_here_too');
+        // console.log(test2[0].getAttribute('id'));
 
-        test4[0].setAttribute('id','gotta_go');
-        test4[0].textContent = test4[0].getAttribute('id');
-        test4[0].removeAttribute('id')
-        console.log(test4[0].hasAttribute('id'))
+        // let test3 = document.getElementById('I_see_u_here_too')
+        // test3.textContent = test3.id; //could write it as test3.textContent = test3.getAttribute('id')
+
+        // let test4 = document.getElementsByClassName('P1')
+        // if(test4[0].hasAttribute('id')){
+        //     test4[0].textContent = test4[0].getAttribute('id')
+        // } else{
+        //     test4[0].textContent = "No ID avilable"
+        // }
+
+        // test4[0].setAttribute('id','gotta_go');
+        // test4[0].textContent = test4[0].getAttribute('id');
+        // test4[0].removeAttribute('id')
+        // console.log(test4[0].hasAttribute('id'))
     </script>
 </body>
 </html>
